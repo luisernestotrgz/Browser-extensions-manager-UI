@@ -1,0 +1,20 @@
+.tab {
+    padding: 10px 24px;
+    border-radius: 24px;
+    background-color: var(--bg-secondary);
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.tab.active {
+    background-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.tab:hover:not(.active) {
+    background-color: var(--accent);
+    color: var(--text-primary);
+}

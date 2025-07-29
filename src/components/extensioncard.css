@@ -1,0 +1,119 @@
+.extension-card {
+    background-color: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    transition: transform 0.2s;
+    min-height: 180px;
+}
+
+.extension-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.extension-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.extension-info {
+    flex: 1;
+}
+
+.extension-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.extension-description {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.remove-btn {
+    background-color: var(--bg-primary);
+    border: none;
+    color: var(--text-secondary);
+    padding: 6px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s;
+    position: absolute;
+    bottom: 24px;
+    left: 18px;
+}
+
+.remove-btn:hover {
+    background-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.extension-footer {
+    margin-top: 20px;
+}
+
+.toggle-switch {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--text-secondary);
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.toggle.inactive {
+    background-color: var(--text-secondary);
+}
+
+.toggle:not(.inactive) {
+    background-color: var(--accent);
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.toggle.inactive::after {
+    transform: translateX(0px);
+}
+
+.toggle:not(.inactive)::after {
+    transform: translateX(24px);
+}
