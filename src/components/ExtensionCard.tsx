@@ -2,13 +2,13 @@ import React from "react"
 import "./extensioncard.css"
 
 type ExtensionProps = {
-  id: string;
+  id?: string;
   icon: string;
   name: string;
   description: string;
   isActive: boolean;
-  onRemove?: () => void;
-  onToggle?: () => void;
+  onRemove: () => void;
+  onToggle: () => void;
 };
 
 const ExtensionCard: React.FC<ExtensionProps> = ({id, icon, name, description, isActive, onRemove, onToggle}) => {
